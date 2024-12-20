@@ -1,4 +1,4 @@
-resource "aws_s3_bucket" "vulnerable_bucket" {
+resource "aws_s3_bucket" "vulnerable_bucket1" {
   bucket = "unique-s3-bucket-${random_id.bucket_id.hex}"
 
   acl    = "public-read" 
