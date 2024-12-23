@@ -1,5 +1,8 @@
-resource "null_resource" "terrateam-test" {
-provisioner "local-exec" {
-  command = "echo Terrateam deployment in progress"
- }
+resource "aws_instance" "example" {
+  ami           = var.ami_id
+  instance_type = var.instance_type
+
+  tags = {
+    Name = var.instance_name
+  }
 }
